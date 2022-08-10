@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/matiaslanzi/Github/LittleEngine'
+clang++ -std=c++17 -Wall -O0 -g -lsdl2 -Iinclude -Llib src/Application.cpp src/mlAnimation.cpp src/mlAssets.cpp src/mlController.cpp src/mlEnemy.cpp src/mlEntity.cpp src/mlGame.cpp src/mlGraphics.cpp src/mlInput.cpp src/mlParticle.cpp src/mlPerticleSystem.cpp src/mlPlayer.cpp src/mlPreferences.cpp src/mlShot.cpp src/mlStarField.cpp src/mlStateGame.cpp src/mlStateHighScore.cpp src/mlStateMenu.cpp src/mlStateSplash.cpp src/mlStateTests.cpp src/mlTime.cpp src/mlType.cpp src/mlUtilities.cpp -o build/debug/MicroEngine.app
+make: Leaving directory `/Users/matiaslanzi/Github/LittleEngine'
+ 
