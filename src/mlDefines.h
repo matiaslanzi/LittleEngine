@@ -10,7 +10,7 @@
 #define MLDEFINES_H
 
 // Basic settings
-#define MLFRAMES_PER_SECOND 60
+#define MLFRAMES_PER_SECOND 30
 #define MLFRAME_RATE        1000/MLFRAMES_PER_SECOND
 
 #define MLWINDOW_TITLE      "Little Engine"
@@ -27,7 +27,7 @@
 #define MLENEMY_COLUMNS 8
 #define MLENEMY_ROWS 8
 
-#define DEBUG
+//#define DEBUG
 
 #ifdef DEBUG
 //#define trace(...)                         printf( __VA_ARGS__ )

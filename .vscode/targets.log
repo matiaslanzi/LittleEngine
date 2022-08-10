@@ -6,8 +6,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
 
-# Make data base, printed on Wed Aug 10 18:10:57 2022
+# Make data base, printed on Wed Aug 10 18:29:32 2022
 
 # Variables
 
@@ -29,6 +30,7 @@ CURDIR := /Users/matiaslanzi/Github/LittleEngine
 SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+ 
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 1)
@@ -54,7 +56,7 @@ PWD = /Users/matiaslanzi/Github/LittleEngine
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # makefile (from `Makefile', line 13)
-LINKER_FLAGS = -lsdl2
+LINKER_FLAGS = -lsdl2 -lsdl2_ttf -lsdl2_image
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -148,7 +150,7 @@ SUFFIXES :=
 # default
 .INCLUDE_DIRS = /usr/local/include
 # makefile (from `Makefile', line 6)
-OBJ_NAME = MicroEngine
+OBJ_NAME = LittleEngine
 # environment
 MAKELEVEL := 0
 # environment
@@ -196,6 +198,7 @@ all:
 # | := 
 # automatic
 # < := 
+ 
 # automatic
 # ^ := 
 # automatic
@@ -215,7 +218,7 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-08-10 18:10:17
+#  Last modified 2022-08-10 18:12:46
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -249,6 +252,6 @@ clean:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Wed Aug 10 18:10:57 2022
+# Finished Make data base on Wed Aug 10 18:29:32 2022
 
  

@@ -17,8 +17,8 @@ public:
         GAMEOVER_STATE
     };
 
-    mlState(mlGame* game) : mpGame(game){}
-    virtual ~mlState(){}
+    mlState(mlGame* game) : mpGame(game){};
+    virtual ~mlState(){};
     
     virtual void Pause() = 0;
     virtual void Resume() = 0;
