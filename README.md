@@ -22,15 +22,18 @@ This engine is using SDL lib to display things on screen so we need to use the f
 SDL2, SDL2_ttf, SDL2_image. Make sure the libraries exist in your system and that you have symlinked the appropriate directories as stated in the above section.
 
 ## Usage
-The engine pushes a mlState class into `mlStateStack` in mlGame class the stack it's public in mlGame so pass mlGame to your state.
+The engine pushes a mlState class into `mlStateStack` in mlGame class. 
+The stack it's public in mlGame so pass mlGame to your state.
+
 The first state loaded is the mlStateSplashState, and if you push `space bar` then mlStateGame gets stacked. 
-When you win the game mlStateGame gets popped and we return to the splash screen. 
+When you win the game mlStateGame gets popped and we return to the mlStateSplashState. 
 Escape key will keep popping states and quit the program.
 
 You can manage your states as you wish, I usually use something like this:
 splashState > menuState > gameState > winstate
 Often times need to jump around but it works.
 
+No input is handled in the game so it's up to you to handle the SDL_QUIT event type, take a look at each state file it will make sense.
 
 ## Contributions
 Please feel free to contribute to this project. I marked with TODO: the stuff that can be made better and of course any ideas are welcome.
