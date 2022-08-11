@@ -10,7 +10,7 @@
 #define MLDEFINES_H
 
 // Basic settings
-#define MLFRAMES_PER_SECOND 30
+#define MLFRAMES_PER_SECOND 60
 #define MLFRAME_RATE        1000/MLFRAMES_PER_SECOND
 
 #define MLWINDOW_TITLE      "Little Engine"

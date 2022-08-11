@@ -1,6 +1,7 @@
 #ifndef MLTYPE_H
 #define MLTYPE_H
 
+// TODO: @matiaslanzi This class should be called text.
 #include "mlCommon.h"
 
 class mlType{

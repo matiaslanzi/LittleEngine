@@ -9,7 +9,6 @@
 #include "mlGame.h"
 #include "mlState.h"
 #include "mlStateGame.h"
-#include "mlParticleSystem.h"
 
 class mlGame;
 

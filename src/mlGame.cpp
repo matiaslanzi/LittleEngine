@@ -6,7 +6,7 @@ mlGame::mlGame()
 
     mlGraphics::Instance();     // Initializes SDL, window and renderer
     mlTime::Instance();         // Initialize time
-    mlAssets::Instance();       // Load the assets TODO: make this lazy
+    mlAssets::Instance();       // Load the assets TODO: make this a manager
     mlInput::Instance();        // Initialize input
     
 
@@ -14,9 +14,7 @@ mlGame::mlGame()
     trace("mlGame: Loading states...");
 
     mpSplashState = new mlStateSplash(this);
-    mpMenuState = new mlStateMenu(this);
     mpGameState = new mlStateGame(this);
-    mpScoreState = new mlStateHighScore(this);
     
     mStateStack.push_back(mpSplashState);
     
@@ -29,8 +27,6 @@ mlGame::~mlGame(){
 
     if(mpSplashState) delete mpSplashState;
     if(mpGameState) delete mpGameState;
-    if(mpMenuState) delete mpMenuState;
-    if(mpScoreState) delete mpScoreState;
 
     trace("mlGame: Game closed");
 }

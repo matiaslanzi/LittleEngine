@@ -31,6 +31,7 @@ mlStateGame::mlStateGame(mlGame *game) : mlState(game){
         shot->SetImage(mlAssets::Instance()->mpMartiansSfc);
         shot->srcIDRect.x = 8;
         shot->srcIDRect.y = 16;
+
         shot->srcIDRect.w = 3;
         shot->srcIDRect.h = 5;
         shot->srcRect = shot->dstRect = shot->srcIDRect;
@@ -93,10 +94,10 @@ mlStateGame::mlStateGame(mlGame *game) : mlState(game){
 
 mlStateGame::~mlStateGame(){
     trace("mlStateGame: Closing game state.");
-    if(explosion) delete explosion;
-    if(mpStarfield) delete mpStarfield;
-    if(background) delete background;
-    if(scoreLabel) delete scoreLabel;
+    if(explosion) delete explosion;         // TODO: Fix this warning Virtual functions but no virtual destructor
+    if(mpStarfield) delete mpStarfield;     // TODO: Fix this warning Virtual functions but no virtual destructor
+    if(background) delete background;       // TODO: Fix this warning Virtual functions but no virtual destructor
+    if(scoreLabel) delete scoreLabel;       // TODO: Fix this warning Virtual functions but no virtual destructor
     if(debug) delete debug;
 }
 
