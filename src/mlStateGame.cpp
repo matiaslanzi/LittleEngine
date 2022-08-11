@@ -67,11 +67,6 @@ mlStateGame::mlStateGame(mlGame *game) : mlState(game){
     mpStarfield = new mlStarField();
     mpStarfield->enabled = true;
 
-    // Background
-    background = new mlEntity();
-    background->SetImage(mlAssets::Instance()->planetBGSfc);
-    background->enabled = false;
-
     // Score
     scoreLabel = new mlEntity();
     scoreLabel->SetColor(0xff, 0x99, 0x99, 0xff);

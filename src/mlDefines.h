@@ -2,12 +2,15 @@
  * File: mlDefines.h
  * Author: @matiaslanzi
  * 
- * All the settings are defined here.
- * 
+ * All the settings are defined here. (shold probably move to preferences)
+ * TODO: create preferences. 
  */
 
 #ifndef MLDEFINES_H
 #define MLDEFINES_H
+
+// Debug?
+//#define DEBUG
 
 // Basic settings
 #define MLFRAMES_PER_SECOND 60
@@ -26,8 +29,6 @@
 #define MLPLAYER_SHOTS_AVAILABLE 10
 #define MLENEMY_COLUMNS 8
 #define MLENEMY_ROWS 8
-
-//#define DEBUG
 
 #ifdef DEBUG
 //#define trace(...)                         printf( __VA_ARGS__ )

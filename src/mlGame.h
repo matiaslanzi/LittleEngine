@@ -11,7 +11,6 @@
 #include "mlState.h"
 #include "mlStateGame.h"
 #include "mlStateSplash.h"
-#include "mlStateHighScore.h"
 
 class mlGame{
 public:

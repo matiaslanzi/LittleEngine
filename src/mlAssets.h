@@ -18,12 +18,7 @@ public:
     static mlAssets* Instance();
     virtual ~mlAssets();
 
-    SDL_Surface     *spriteSheetSfc;
-    SDL_Surface     *playerSfc;
-    SDL_Surface     *explosionSfc;
-    SDL_Surface     *planetBGSfc;
-    SDL_Surface     *mpBackgroundSfc;
-    SDL_Surface* mpMartiansSfc;
+    SDL_Surface     *mpMartiansSfc;
     
 private:
     

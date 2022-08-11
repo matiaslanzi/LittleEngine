@@ -4,7 +4,6 @@
  * 
  * mlCommon.h is a header file that will include everything needed to compile 
  * the program.
- * 
  */
 
 #ifndef MLCOMMON_H
