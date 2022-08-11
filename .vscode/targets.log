@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Thu Aug 11 14:55:42 2022
+# Make data base, printed on Thu Aug 11 16:58:49 2022
 
 # Variables
 
@@ -37,7 +37,7 @@ MAKEFILE_LIST :=  Makefile
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_CWD = /Users/matiaslanzi/Github/LittleEngine
+VSCODE_CWD = /Users/matiaslanzi
 # environment
 PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
 # environment
@@ -69,7 +69,7 @@ VSCODE_CODE_CACHE_PATH = /Users/matiaslanzi/Library/Application Support/Code/Cac
 # environment
 LOGNAME = matiaslanzi
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
@@ -95,7 +95,7 @@ USER = matiaslanzi
 # makefile
 .DEFAULT_GOAL := all
 # environment
-TERM_SESSION_ID = 01198040-8838-46E4-B6DF-91BE3C3DE9CB
+TERM_SESSION_ID = 66D6E460-4A92-44B0-88F9-C3A0B3529DCB
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
@@ -121,7 +121,7 @@ MFLAGS = -Rrqp
 # environment
 TERM_PROGRAM_VERSION = 445
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.2909870.2909876.594DCDE9-0B12-4CA2-AABE-6D4C2152E13A
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.2909870.2909876.63732C3D-7EC5-4111-BD47-FC2F99BC0C51
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -168,9 +168,9 @@ VSCODE_PID = 3494
 # Directories
 
 # . (device 16777223, inode 2845790): 19 files, no impossibilities.
-# src (device 16777223, inode 2846132): 54 files, no impossibilities.
+# src (device 16777223, inode 2846132): 35 files, no impossibilities.
 
-# 73 files, no impossibilities in 2 directories.
+# 54 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -250,6 +250,6 @@ clean:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Aug 11 14:55:42 2022
+# Finished Make data base on Thu Aug 11 16:58:49 2022
 
  
