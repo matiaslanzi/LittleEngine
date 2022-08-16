@@ -1,6 +1,12 @@
 #ifndef MLUTILITIES_H
 #define MLUTILITIES_H
 
+/* 
+ * This is the Utilities file, but why is it a class?
+ * TODO: put these utilities on a single file to include.
+ */
+
+
 #include "mlCommon.h"
 
 class mlUtilities{

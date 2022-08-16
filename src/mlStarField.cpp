@@ -42,7 +42,7 @@ void mlStarField::Update(){
     if(!enabled) return;
 
     for(i=0; i < 99; i++){
-        mpPointArray[i].y += (mpSpeedArray[i]*100)*mlTime::Instance()->deltaTime;
+        mpPointArray[i].y += (mpSpeedArray[i]*100) * mlTime::Instance()->deltaTime;
         if(mpPointArray[i].y > MLWINDOW_HEIGHT){
             mpPointArray[i].y = 0;
             mpPointArray[i].x = rand()%MLWINDOW_WIDTH;
