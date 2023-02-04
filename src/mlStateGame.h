@@ -59,6 +59,10 @@ public:
     float*        mpSpeedArray;
     
 private:
+
+    bool mbShoot;
+    bool mbLeft;
+    bool mbRight;
 };
 
 #endif

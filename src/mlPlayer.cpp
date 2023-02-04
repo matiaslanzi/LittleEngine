@@ -96,17 +96,17 @@ void mlPlayer::Draw(){
 
 
 void mlPlayer::MoveLeft(){
-    if(xVel > 100){
+    if(xVel > 20){
         xVel = 0;
     }
 
-    xVel += -100;
+    xVel += -20;
 }
 
 void mlPlayer::MoveRight(){
-    if(xVel <  -100){
+    if(xVel <  -20){
        xVel = 0;
     }
-    xVel += 100;
+    xVel += 20;
 
 }

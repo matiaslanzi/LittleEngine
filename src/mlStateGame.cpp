@@ -126,15 +126,18 @@ void mlStateGame::Input(){
             switch(mlInput::Instance()->event.key.keysym.sym )
             { 
                 case SDLK_SPACE:
-                    PlayerShoot();
+                    mbShoot = true;
+                    //PlayerShoot();
                     break;
 
                 case SDLK_LEFT:
-                    player->MoveLeft();
+                    mbLeft = true;
+                    //player->MoveLeft();
                     break;
 
                 case SDLK_RIGHT:
-                    player->MoveRight();
+                    mbRight = true;
+                    //player->MoveRight();
                     break;
 
                 case SDLK_ESCAPE:
@@ -146,29 +149,53 @@ void mlStateGame::Input(){
             }
             break;
 
-        case SDL_JOYAXISMOTION:    
-            // Motion on controller 0, TODO: scan all controllers
-            // TODO: Debounce
+        case SDL_KEYUP:
+            switch(mlInput::Instance()->event.key.keysym.sym )
+            { 
+                case SDLK_SPACE:
+                    mbShoot = false;
+                    //PlayerShoot();
+                    break;
 
-            if(mlInput::Instance()->event.jaxis.which == 0){
-                if(mlInput::Instance()->event.jaxis.axis == 0 ){ // X axis motion
-                    if( mlInput::Instance()->event.jaxis.value < -mlInput::Instance()->jDeadZone )
-                    {
-                        //Left of dead zone
-                        player->MoveRight();
-                    } else if ( mlInput::Instance()->event.jaxis.value > mlInput::Instance()->jDeadZone ){   
-                        
-                        //Right of deadzone
-                        player->MoveLeft();
-                    }
-                }
+                case SDLK_LEFT:
+                    mbLeft = false;
+                    //player->MoveLeft();
+                    break;
+
+                case SDLK_RIGHT:
+                    mbRight = false;
+                    //player->MoveRight();
+                    break;
+
+                default:
+                    break;
             }
-            
             break;
 
-        case SDL_JOYBUTTONDOWN:
-                PlayerShoot();
-            break;
+
+        // case SDL_JOYAXISMOTION:    
+        //     // Motion on controller 0, TODO: scan all controllers
+        //     // TODO: Debounce
+
+        //     if(mlInput::Instance()->event.jaxis.which == 0){
+        //         if(mlInput::Instance()->event.jaxis.axis == 0 ){ // X axis motion
+        //             if( mlInput::Instance()->event.jaxis.value < -mlInput::Instance()->jDeadZone )
+        //             {
+        //                 //Left of dead zone
+        //                 player->MoveRight();
+        //             } else if ( mlInput::Instance()->event.jaxis.value > mlInput::Instance()->jDeadZone ){   
+                        
+        //                 //Right of deadzone
+        //                 player->MoveLeft();
+        //             }
+        //         }
+        //     }
+            
+        //     break;
+
+        // case SDL_JOYBUTTONDOWN:
+        //         PlayerShoot();
+        //     break;
         }
     }
 }
@@ -185,6 +212,14 @@ void mlStateGame::Update(){
     explosion->Update();
 
     EnemyUpdate();
+
+    if(mbShoot){
+        PlayerShoot();
+        mbShoot = false;    
+    }
+
+    if(mbLeft) player->MoveLeft();
+    if(mbRight) player->MoveRight();
 
     player->Update();
 
