@@ -1,12 +1,14 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-# GNU Make 4.2.1
-# Built for x86_64-pc-linux-gnu
-# Copyright (C) 1988-2016 Free Software Foundation, Inc.
-# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
-# This is free software: you are free to change and redistribute it.
-# There is NO WARRANTY, to the extent permitted by law.
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
 
-# Make data base, printed on Wed Apr 26 19:51:52 2023
+# This program built for i386-apple-darwin11.3.0
+ 
+
+# Make data base, printed on Tue Jul 25 19:56:59 2023
 
 # Variables
 
@@ -15,233 +17,156 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # automatic
 ?F = $(notdir $?)
 # environment
-DESKTOP_SESSION = cinnamon
-# default
-.SHELLFLAGS := -c
-# environment
-XDG_SESSION_CLASS = user
+ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
-# environment
-XDG_SESSION_TYPE = x11
-# environment
-GTK3_MODULES = xapp-gtk3-module
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
-# environment
-XAUTHORITY = /home/matiaslanzi/.Xauthority
-# environment
-GDMSESSION = cinnamon
-# default
-MAKE_VERSION := 4.2.1
+# automatic
+@F = $(notdir $@)
 # makefile
-CURDIR := /home/matiaslanzi/GitHub/LittleEngine
+CURDIR := /Users/matiaslanzi/Github/LittleEngine
 # makefile
 SHELL = /bin/sh
 # environment
-GDM_LANG = en_US
-# environment
-VTE_VERSION = 6003
-# environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","osLocale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-_ = /usr/bin/code
-# environment
-XDG_CONFIG_DIRS = /etc/xdg/xdg-cinnamon:/etc/xdg
-# environment
-GTK_OVERLAY_SCROLLING = 1
-# makefile (from 'Makefile', line 1)
+_ = /usr/bin/make
+# makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
-# automatic
-@F = $(notdir $@)
-# 'override' directive
-GNUMAKEFLAGS := 
 # environment
-MANDATORY_PATH = /usr/share/gconf/cinnamon.mandatory.path
+__CFBundleIdentifier = com.microsoft.VSCode
+ 
 # environment
-XDG_DATA_DIRS = /usr/share/cinnamon:/usr/share/gnome:/home/matiaslanzi/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+VSCODE_CWD = /Users/matiaslanzi/Github/LittleEngine
 # environment
-DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
-# environment
-LESSOPEN = | /usr/bin/lesspipe %s
-# environment
-VSCODE_CWD = /home/matiaslanzi/GitHub/LittleEngine
-# environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
-# default
-MAKE_HOST := x86_64-pc-linux-gnu
-# environment
-PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-# environment
-GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
-# environment
-SESSION_MANAGER = local/matiaslanzi:@/tmp/.ICE-unix/1217,unix/matiaslanzi:/tmp/.ICE-unix/1217
-# environment
-XDG_RUNTIME_DIR = /run/user/1000
+PATH = /usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
 # environment
 ELECTRON_RUN_AS_NODE = 1
-# makefile (from 'Makefile', line 22)
-INCLUDE_PATHS = -Iinclude/linux
+# makefile (from `Makefile', line 31)
+INCLUDE_PATHS = -Iinclude/macos
 # default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/matiaslanzi
-# environment
-LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
-# environment
-XDG_SESSION_DESKTOP = cinnamon
-# environment
-SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.mauAawhdqp/Listeners
 # automatic
 %F = $(notdir $%)
-# makefile (from 'Makefile', line 17)
-UNAME_S := Linux
+# makefile (from `Makefile', line 17)
+UNAME_S := Darwin
 # environment
-DISPLAY = :0
+PWD = /Users/matiaslanzi/Github/LittleEngine
 # environment
-PWD = /home/matiaslanzi/GitHub/LittleEngine
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# makefile (from `Makefile', line 30)
+LINKER_FLAGS = -lsdl2 -lsdl2_ttf -lsdl2_image
 # environment
-QT_QPA_PLATFORMTHEME = qt5ct
-# default
-.LOADED := 
-# environment
-XDG_SEAT = seat0
-# environment
-SSH_AGENT_PID = 1292
-# environment
-ORIGINAL_XDG_CURRENT_DESKTOP = X-Cinnamon
-# makefile (from 'Makefile', line 21)
-LINKER_FLAGS = -lSDL2 -lSDL2_ttf -lSDL2_image
-# environment
-GTK_MODULES = gail:atk-bridge
+MANPATH = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/share/man:/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/usr/share/man:/Applications/Xcode.app/Contents/Developer/usr/share/man:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/share/man:
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-HOME = /home/matiaslanzi
-# environment
-LESSCLOSE = /usr/bin/lesspipe %s %s
+HOME = /Users/matiaslanzi
+# default
+MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
 VSCODE_CLI = 1
 # environment
-VSCODE_CODE_CACHE_PATH = /home/matiaslanzi/.config/Code/CachedData/704ed70d4fd1c6bd6342c436f1ede30d1cff4710
+VSCODE_CODE_CACHE_PATH = /Users/matiaslanzi/Library/Application Support/Code/CachedData/660393deaaa6d1996740ff4880f1bad43768c814
 # environment
 LOGNAME = matiaslanzi
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
-# environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
-# environment
-GNOME_DESKTOP_SESSION_ID = this-is-deprecated
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
-XDG_VTNR = 7
-# environment
-MAKELEVEL := 0
-# environment
-COLORTERM = truecolor
+XPC_FLAGS = 0x0
 # default
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
-# makefile (from 'Makefile', line 12)
+# makefile (from `Makefile', line 12)
 COMPILER_FLAGS = -std=c++17 -Wall -O0 -g
 # environment
-SHLVL = 1
-# makefile (from 'Makefile', line 11)
+SHLVL = 3
+# makefile (from `Makefile', line 11)
 CC = clang++
-# makefile (from 'Makefile', line 9)
+# makefile (from `Makefile', line 9)
 BUILD_DIR = build/debug
-# environment
-XDG_SESSION_ID = c2
+# default
+MAKE_VERSION := 3.81
 # environment
 USER = matiaslanzi
 # makefile
 .DEFAULT_GOAL := all
 # environment
-XDG_CURRENT_DESKTOP = X-Cinnamon
-# makefile (from 'Makefile', line 19)
-UNAME_M := x86_64
+TERM_SESSION_ID = 0D56FDEC-0D8B-4A82-9E93-57C588FB31E0
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
-MAKE_COMMAND := make
+MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
 # environment
-OLDPWD = /home/matiaslanzi/GitHub/LittleEngine/build
+TERM_PROGRAM = Apple_Terminal
 # default
 .VARIABLES := 
+# environment
+TMPDIR = /var/folders/0h/9dfttl3s19s9qysx969jfbmm0000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-LANGUAGE = en_US
+VSCODE_IPC_HOOK = /Users/matiaslanzi/Library/Application Support/Code/1.80-main.sock
 # environment
-XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
-# environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-f2876c59-1.77-main.sock
+MallocNanoZone = 0
 # makefile
-MAKEFLAGS = pqrR
+MAKEFLAGS = Rrqp
 # environment
-MFLAGS = -pqrR
+MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
+# environment
+TERM_PROGRAM_VERSION = 447
+# environment
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.25929510.25929516.1980FE50-6696-49D1-84CB-907A486C6964
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
-# environment
-GDK_BACKEND = x11
 # automatic
 +F = $(notdir $+)
 # environment
-CINNAMON_VERSION = 5.2.7
+__CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x0
 # environment
-QT_ACCESSIBILITY = 1
-# environment
-DEFAULTS_PATH = /usr/share/gconf/cinnamon.default.path
-# 'override' directive
-.SHELLSTATUS := 0
+COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
-# makefile (from 'Makefile', line 7)
+# makefile (from `Makefile', line 7)
 SRC_DIR = src
 # automatic
 <F = $(notdir $<)
 # environment
 LC_ALL = C
-# makefile (from 'Makefile', line 23)
-LIBRARY_PATHS = -Llib/linux
-# environment
-GJS_DEBUG_TOPICS = JS ERROR;JS LOG
-# environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/d44ee981_b934_48f1_8680_174ecd12eb03
+# makefile (from `Makefile', line 32)
+LIBRARY_PATHS = -Llib/macos
 # automatic
 ^F = $(notdir $^)
-# makefile (from 'Makefile', line 8)
+# makefile (from `Makefile', line 8)
 SRC_FILES = $(wildcard $(SRC_DIR)/*.cpp)
-# environment
-GNOME_TERMINAL_SERVICE = :1.87
 # default
 SUFFIXES := 
-# environment
-CHROME_DESKTOP = code-url-handler.desktop
 # default
-.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+.INCLUDE_DIRS = /usr/local/include
+# makefile (from `Makefile', line 6)
+OBJ_NAME = LittleEngine
 # environment
-GJS_DEBUG_OUTPUT = stderr
-# makefile (from 'Makefile', line 6)
-OBJ_NAME = MicroEngine
-# default
-.RECIPEPREFIX := 
+MAKELEVEL := 0
 # environment
 LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 5898
+VSCODE_PID = 4281
 # variable set hash-table stats:
-# Load=115/1024=11%, Rehash=0, Collisions=9/161=6%
+# Load=76/1024=7%, Rehash=0, Collisions=1/115=1%
 
 # Pattern-specific Variable Values
 
@@ -249,10 +174,10 @@ VSCODE_PID = 5898
 
 # Directories
 
-# . (device 2050, inode 9832108): 14 files, no impossibilities.
-# src (device 2050, inode 9832224): 32 files, no impossibilities.
+# . (device 16777223, inode 2845790): 19 files, no impossibilities.
+# src (device 16777223, inode 2846132): 33 files, no impossibilities.
 
-# 46 files, no impossibilities in 2 directories.
+# 52 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -261,9 +186,9 @@ VSCODE_PID = 5898
 # Files
 
 all:
-#  Command line target.
+#  Command-line target.
 #  Implicit rule search has not been done.
-#  Implicit/static pattern stem: ''
+#  Implicit/static pattern stem: `'
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
@@ -284,10 +209,10 @@ all:
 # automatic
 # ? := 
 # variable set hash-table stats:
- 
-# Load=8/32=25%, Rehash=0, Collisions=1/20=5%
-#  recipe to execute (from 'Makefile', line 39):
+# Load=8/32=25%, Rehash=0, Collisions=1/19=5%
+#  commands to execute (from `Makefile', line 39):
 	$(CC) $(COMPILER_FLAGS) $(LINKER_FLAGS) $(INCLUDE_PATHS) $(LIBRARY_PATHS) $(SRC_FILES) -o $(BUILD_DIR)/$(OBJ_NAME).app
+	
 
 # Not a target:
 .SUFFIXES:
@@ -298,9 +223,11 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2023-04-26 19:49:00.600500167
+#  Last modified 2023-04-26 21:39:30
 #  File has been updated.
 #  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 .DEFAULT:
@@ -312,25 +239,24 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 42):
+#  commands to execute (from `Makefile', line 42):
 	rm -f $(BUILD_DIR)/$(OBJ_NAME).app
 	rm -fR $(BUILD_DIR)/$(OBJ_NAME).app.dSYM
 	
 
 # files hash-table stats:
-# Load=5/1024=0%, Rehash=0, Collisions=0/17=0%
+# Load=5/1024=0%, Rehash=0, Collisions=0/19=0%
 # VPATH Search Paths
 
-# No 'vpath' search paths.
+# No `vpath' search paths.
 
-# No general ('VPATH' variable) search path.
+# No general (`VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 50 / storage = 517 B / avg = 10 B
-# current buf: size = 8162 B / used = 517 B / count = 50 / avg = 10 B
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# strcache performance: lookups = 61 / hit rate = 18%
-# hash-table stats:
-# Load=50/8192=1%, Rehash=0, Collisions=2/61=3%
-# Finished Make data base on Wed Apr 26 19:51:52 2023
+# Finished Make data base on Tue Jul 25 19:56:59 2023
 
  
