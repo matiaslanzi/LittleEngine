@@ -32,6 +32,12 @@ mlAssets::mlAssets(){
         trace("mlAssets: Can't load image. %s", IMG_GetError());
         exit(-1);
     }
+
+    mpBGSfc = IMG_Load("BG1.png");
+    if(mpBGSfc == NULL){
+        trace("mlAssets: Can't load image. %s", IMG_GetError());
+        exit(-1);
+    }  
 }
 
 mlAssets::~mlAssets(){

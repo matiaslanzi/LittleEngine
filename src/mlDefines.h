@@ -10,7 +10,7 @@
 #define MLDEFINES_H
 
 // Debug?
-//#define DEBUG
+#define DEBUG
 
 // Basic settings
 #define MLFRAMES_PER_SECOND 60

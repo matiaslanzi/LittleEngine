@@ -19,6 +19,7 @@ public:
     virtual ~mlAssets();
 
     SDL_Surface     *mpMartiansSfc;
+    SDL_Surface     *mpBGSfc;
     
 private:
     

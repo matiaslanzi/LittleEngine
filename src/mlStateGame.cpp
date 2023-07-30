@@ -83,6 +83,12 @@ mlStateGame::mlStateGame(mlGame *game) : mlState(game){
     debug->txtDstRect.y = 0;
     debug->enabled = true;
     debug->txtEnabled = true;
+
+    background = new mlEntity();
+    background->SetImage(mlAssets::Instance()->mpBGSfc);
+    background->dstRect.w = MLWINDOW_WIDTH;
+    background->dstRect.h = MLWINDOW_HEIGHT;
+    background->enabled = true;
 }
 
 
@@ -231,13 +237,15 @@ void mlStateGame::Update(){
     snprintf(scoreStr, sizeof(scoreStr), "SCORE: %i", score);
     scoreLabel->SetText(scoreStr);
 
-    // sprintf(debugString, "DELTA TIME: %f", mlTime::Instance()->deltaTime);
-    // debug->SetText(debugString);
-
+#ifdef DEBUG
+    //sprintf(debugString, "DELTA TIME: %f", mlTime::Instance()->deltaTime);
+    snprintf(debugString, sizeof(debugString), "Debug: %f", mlTime::Instance()->deltaTime);
+    debug->SetText(debugString);
+#endif
 }
 
 void mlStateGame::Draw(){
-    //background->Draw();
+    background->Draw();
     mpStarfield->Draw();
     ShotsDraw();
     EnemyDraw();
