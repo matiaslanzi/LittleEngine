@@ -15,11 +15,15 @@ void mlEnemy::Input(){
 
 void mlEnemy::Update(){
     if(!enabled) return;
+    
     dstRect.y += (yVel * mlTime::Instance()->deltaTime);
     dstRect.x += (xVel * mlTime::Instance()->deltaTime);
+
+    mlEntity::Update();
 }
 
 void mlEnemy::Draw(){
     if(!enabled) return;
-    SDL_RenderCopy(mlGraphics::Instance()->mpRenderer, image, &srcRect, &dstRect);
+    mlEntity::Draw();
+    //SDL_RenderCopy(mlGraphics::Instance()->mpRenderer, image, &srcRect, &dstRect);
 }

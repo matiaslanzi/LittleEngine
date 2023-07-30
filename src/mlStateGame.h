@@ -52,7 +52,7 @@ public:
     char                        debugString[32];
     std::vector<mlEntity*>      shotsPool;
     std::vector<mlEntity*>      shotsShot;
-    std::vector<mlEntity*>      enemies;
+    std::vector<mlEnemy*>       enemies;
     std::vector<mlEntity*>      stageStack;
 
     SDL_Point*   mpPointArray;

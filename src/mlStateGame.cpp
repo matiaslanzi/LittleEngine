@@ -42,7 +42,7 @@ mlStateGame::mlStateGame(mlGame *game) : mlState(game){
     // Allocate enemies
     for(int i=0; i<MLENEMY_COLUMNS; i++){
         for(int j=0; j<MLENEMY_ROWS; j++){
-            mlEntity *enemy = new mlEntity();
+            mlEnemy *enemy = new mlEnemy();
             SDL_SetColorKey(mlAssets::Instance()->mpMartiansSfc, SDL_TRUE, SDL_MapRGB(mlAssets::Instance()->mpMartiansSfc->format, 0x00, 0x00, 0x00));
             enemy->SetImage(mlAssets::Instance()->mpMartiansSfc);
             enemy->srcIDRect.x = 40;
@@ -89,11 +89,11 @@ mlStateGame::mlStateGame(mlGame *game) : mlState(game){
 
 mlStateGame::~mlStateGame(){
     trace("mlStateGame: Closing game state.");
-    if(explosion) delete explosion;         // TODO: Fix this warning Virtual functions but no virtual destructor
-    if(mpStarfield) delete mpStarfield;     // TODO: Fix this warning Virtual functions but no virtual destructor
-    if(background) delete background;       // TODO: Fix this warning Virtual functions but no virtual destructor
-    if(scoreLabel) delete scoreLabel;       // TODO: Fix this warning Virtual functions but no virtual destructor
-    if(debug) delete debug;
+    // if(explosion) delete explosion;         // TODO: Fix this warning Virtual functions but no virtual destructor
+    // if(mpStarfield) delete mpStarfield;     // TODO: Fix this warning Virtual functions but no virtual destructor
+    // if(background) delete background;       // TODO: Fix this warning Virtual functions but no virtual destructor
+    // if(scoreLabel) delete scoreLabel;       // TODO: Fix this warning Virtual functions but no virtual destructor
+    // if(debug) delete debug;
 }
 
 void mlStateGame::Reset(){
@@ -227,7 +227,8 @@ void mlStateGame::Update(){
 
     mpStarfield->Update();
 
-    sprintf(scoreStr,"SCORE: %i", score);
+    //sprintf(scoreStr,"SCORE: %i", score);
+    snprintf(scoreStr, sizeof(scoreStr), "SCORE: %i", score);
     scoreLabel->SetText(scoreStr);
 
     // sprintf(debugString, "DELTA TIME: %f", mlTime::Instance()->deltaTime);
