@@ -7,7 +7,7 @@ mlGame::mlGame()
     mlGraphics::Instance();     // Initializes SDL, window and renderer
     mlTime::Instance();         // Initialize time
     mlAssets::Instance();       // Load the assets TODO: make this a manager
-    mlInput::Instance();        // Initialize input
+    mlInput::Instance();        // Initialize input TODO: Make this useful
     
 
     // Instantiate the states of the game

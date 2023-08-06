@@ -16,7 +16,7 @@ void mlStateSplash::Setup(){
     // Press space
     pressSpace = new mlEntity();
     pressSpace->SetColor(0xff, 0x00, 0x00, 0xff);
-    pressSpace->SetText("PRESS SPACE TO PLAY OR ESC TO QUIT");
+    pressSpace->SetText("Press space to play and escape to quit");
     pressSpace->txtDstRect.x = (MLWINDOW_WIDTH / 2) - (pressSpace->txtIDRect.w / 2);
     pressSpace->txtDstRect.y = (MLWINDOW_HEIGHT / 2) - (pressSpace->txtIDRect.h / 2);
     pressSpace->enabled = true;

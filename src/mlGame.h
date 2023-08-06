@@ -23,6 +23,10 @@ public:
     
     mlState     *mpSplashState;
     mlState     *mpGameState;
+    //mlState     *mpWinsState;
+    //mlState     *mlLoseState;
+    //mlState     *mpMenuState;
+    //mlState     *mpScores;
 
     std::vector <mlState*>  mStateStack;
 };
