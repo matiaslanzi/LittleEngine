@@ -91,18 +91,17 @@ mlStateGame::mlStateGame(mlGame *game) : mlState(game){
     background->enabled = true;
 }
 
-
-
 mlStateGame::~mlStateGame(){
-    trace("mlStateGame: Closing game state.");
-    // if(explosion) delete explosion;         // TODO: Fix this warning Virtual functions but no virtual destructor
-    // if(mpStarfield) delete mpStarfield;     // TODO: Fix this warning Virtual functions but no virtual destructor
-    // if(background) delete background;       // TODO: Fix this warning Virtual functions but no virtual destructor
-    // if(scoreLabel) delete scoreLabel;       // TODO: Fix this warning Virtual functions but no virtual destructor
-    // if(debug) delete debug;
+    trace("mlStateGame::~mlStateGame: Closing game state.");
+
+    // This destructor should clean up the game. Unload all assets and 
+    // do any kind of cleanup.
 }
 
 void mlStateGame::Reset(){
+    trace("mlStateGame::Reset: Reseting game.");
+
+    // TODO: Make sure this function resets the game.
     win = false;
 
     while(shotsShot.size()!=0){
@@ -125,7 +124,7 @@ void mlStateGame::Input(){
     if(mlInput::Instance()->GetInput()){
         switch (mlInput::Instance()->event.type){
         case SDL_QUIT:
-            mpGame->mRunning = false;
+            mpGame->QuitGame();
             break;
             
         case SDL_KEYDOWN:
@@ -133,17 +132,14 @@ void mlStateGame::Input(){
             { 
                 case SDLK_SPACE:
                     mbShoot = true;
-                    //PlayerShoot();
                     break;
 
                 case SDLK_LEFT:
                     mbLeft = true;
-                    //player->MoveLeft();
                     break;
 
                 case SDLK_RIGHT:
                     mbRight = true;
-                    //player->MoveRight();
                     break;
 
                 case SDLK_ESCAPE:
@@ -160,17 +156,14 @@ void mlStateGame::Input(){
             { 
                 case SDLK_SPACE:
                     mbShoot = false;
-                    //PlayerShoot();
                     break;
 
                 case SDLK_LEFT:
                     mbLeft = false;
-                    //player->MoveLeft();
                     break;
 
                 case SDLK_RIGHT:
                     mbRight = false;
-                    //player->MoveRight();
                     break;
 
                 default:
@@ -178,30 +171,6 @@ void mlStateGame::Input(){
             }
             break;
 
-
-        // case SDL_JOYAXISMOTION:    
-        //     // Motion on controller 0, TODO: scan all controllers
-        //     // TODO: Debounce
-
-        //     if(mlInput::Instance()->event.jaxis.which == 0){
-        //         if(mlInput::Instance()->event.jaxis.axis == 0 ){ // X axis motion
-        //             if( mlInput::Instance()->event.jaxis.value < -mlInput::Instance()->jDeadZone )
-        //             {
-        //                 //Left of dead zone
-        //                 player->MoveRight();
-        //             } else if ( mlInput::Instance()->event.jaxis.value > mlInput::Instance()->jDeadZone ){   
-                        
-        //                 //Right of deadzone
-        //                 player->MoveLeft();
-        //             }
-        //         }
-        //     }
-            
-        //     break;
-
-        // case SDL_JOYBUTTONDOWN:
-        //         PlayerShoot();
-        //     break;
         }
     }
 }

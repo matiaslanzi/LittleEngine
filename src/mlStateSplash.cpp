@@ -6,12 +6,12 @@ mlStateSplash::mlStateSplash(mlGame *game) : mlState(game){
 }
 
 mlStateSplash::~mlStateSplash(){
-    trace("mlStateSplash: Closing splash state.");
+    trace("mlStateSplash::~mlStateSplash: Closing splash state.");
 }
 
 void mlStateSplash::Setup(){
 
-    trace("mlStateSplash Setup: Setting things up...");
+    trace("mlStateSplash::Setup: Setting things up...");
 
     // Press space
     pressSpace = new mlEntity();
@@ -37,8 +37,7 @@ void mlStateSplash::Input(){
     if(mlInput::Instance()->GetInput()){
         switch (mlInput::Instance()->event.type){
             case SDL_QUIT:
-                trace("mlSplashState: Quit requested.");
-                mpGame->mRunning = false; // This should be done by a quit handler.
+                mpGame->QuitGame();
                 break;
 
             case SDL_KEYDOWN:

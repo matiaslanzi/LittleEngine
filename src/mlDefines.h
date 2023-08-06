@@ -12,16 +12,19 @@
 // Debug?
 #define DEBUG
 
-// Basic settings
+// Timing
 #define MLFRAMES_PER_SECOND 60
 #define MLFRAME_RATE        1000/MLFRAMES_PER_SECOND
 
+// Graphics
+#define MLSCALE_QUALITY     "1"
 #define MLWINDOW_TITLE      "Little Engine"
 #define MLWINDOW_WIDTH      320
 #define MLWINDOW_HEIGHT     240
 #define MLRENDERSCALEX      3
 #define MLRENDERSCALEY      3
 
+// Fonts
 #define MLFONTFILE          "Chicago.ttf"
 #define MLFONTSIZE          9
 

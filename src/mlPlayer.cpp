@@ -20,10 +20,10 @@ mlPlayer::mlPlayer(){
     xVel = yVel = 0;
 
     animates = false;
-    animFrames = 2;
-    animFrameLength = 10;
-    animOffX = 0;
-    animOffY = 46;
+    //animFrames = 0;
+    //animFrameLength = 0;
+    //animOffX = 0;
+    //animOffY = 0;
 
     // Canon flash
     mpCanonFlash = new mlEntity();
@@ -49,11 +49,6 @@ mlPlayer::~mlPlayer(){
 
 void  mlPlayer::Update(){
     if(!enabled) return;
-
-    Animate();
-    // Move the player
-    dstRect.y += (yVel * mlTime::Instance()->deltaTime);
-    dstRect.x += (xVel * mlTime::Instance()->deltaTime);
 
     if(isShooting){     
         mpCanonFlash->enabled = true;
@@ -86,6 +81,11 @@ void  mlPlayer::Update(){
         xVel += xFric*100*mlTime::Instance()->deltaTime;
     }
 
+    // Update the player
+    dstRect.y += (yVel * mlTime::Instance()->deltaTime);
+    dstRect.x += (xVel * mlTime::Instance()->deltaTime);
+    
+    Animate();
     
 }
 

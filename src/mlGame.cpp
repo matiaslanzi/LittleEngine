@@ -40,7 +40,7 @@ bool mlGame::Running(){
 
         if(mStateStack.empty()){
 
-            trace("mlGame: State stack is empty, quitting now.");
+            trace("mlGame::Running State stack is empty, quitting now.");
             
             QuitGame();
 
@@ -69,6 +69,8 @@ bool mlGame::Running(){
 void mlGame::QuitGame(){
     // This handler gets called when we want to quit for any reason.
     // Handle game saves here.
-    
+
+    trace("mlGame::QuitGame: Quit handler called");
+
     mRunning = false;
 }
