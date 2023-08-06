@@ -28,6 +28,9 @@
 #define MLFONTFILE          "Chicago.ttf"
 #define MLFONTSIZE          9
 
+// Physics
+#define MLGRAVITY 9.8f
+
 // Game
 #define MLPLAYER_SHOTS_AVAILABLE 10
 #define MLENEMY_COLUMNS 8

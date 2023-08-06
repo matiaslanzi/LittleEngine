@@ -2,10 +2,19 @@
 
 mlStateGame::mlStateGame(mlGame *game) : mlState(game){
 
-    gravity = 9.8f; // 9.80665 m/s2
+    Setup();
 
-    win = false;
-    score = 0;
+    Reset();
+}
+
+mlStateGame::~mlStateGame(){
+    trace("mlStateGame::~mlStateGame: Closing game state.");
+
+    // TODO: This destructor should clean up the game. Unload all assets and 
+    // do any kind of cleanup.
+}
+
+void mlStateGame::Setup(){
 
     // Player 
     player = new mlPlayer();
@@ -25,44 +34,6 @@ mlStateGame::mlStateGame(mlGame *game) : mlState(game){
     explosion->animFrames = 6;
     explosion->animOffX = 16;
     
-    // Allocate the shots
-    for (int i = 0; i < MLPLAYER_SHOTS_AVAILABLE; i++){
-        mlEntity *shot = new mlEntity();
-        shot->SetImage(mlAssets::Instance()->mpMartiansSfc);
-        shot->srcIDRect.x = 8;
-        shot->srcIDRect.y = 16;
-
-        shot->srcIDRect.w = 3;
-        shot->srcIDRect.h = 5;
-        shot->srcRect = shot->dstRect = shot->srcIDRect;
-        shot->enabled = true;
-        shotsPool.push_back(shot);
-    }
-
-    // Allocate enemies
-    for(int i=0; i<MLENEMY_COLUMNS; i++){
-        for(int j=0; j<MLENEMY_ROWS; j++){
-            mlEnemy *enemy = new mlEnemy();
-            SDL_SetColorKey(mlAssets::Instance()->mpMartiansSfc, SDL_TRUE, SDL_MapRGB(mlAssets::Instance()->mpMartiansSfc->format, 0x00, 0x00, 0x00));
-            enemy->SetImage(mlAssets::Instance()->mpMartiansSfc);
-            enemy->srcIDRect.x = 40;
-            enemy->srcIDRect.y = 0 * j;
-            enemy->srcIDRect.w = 8;
-            enemy->srcIDRect.h = 8;
-            enemy->srcRect = enemy->dstRect = enemy->srcIDRect;
-            enemy->dstRect.x = 35*i+20;
-            enemy->dstRect.y = (50*j+30)*.4;
-            enemy->enabled = true;
-            
-            enemy->animates = true;
-            enemy->animFrames = 3;
-            enemy->animOffX = 8;
-            enemy->animFrameLength = 30;
-
-            enemies.push_back(enemy);
-        }
-    }
-
     // Star field
     mpStarfield = new mlStarField();
     mpStarfield->enabled = true;
@@ -75,14 +46,15 @@ mlStateGame::mlStateGame(mlGame *game) : mlState(game){
     scoreLabel->enabled = true;
     scoreLabel->txtEnabled = true;
     
-
     // Debug text
-    debug = new mlEntity();
-    debug->SetColor(0xff, 0x99, 0x99, 0xff);
-    debug->txtDstRect.x = 200;
-    debug->txtDstRect.y = 0;
-    debug->enabled = true;
-    debug->txtEnabled = true;
+    #ifdef DEBUG
+        debug = new mlEntity();
+        debug->SetColor(0xff, 0x99, 0x99, 0xff);
+        debug->txtDstRect.x = 200;
+        debug->txtDstRect.y = 0;
+        debug->enabled = true;
+        debug->txtEnabled = true;
+    #endif
 
     background = new mlEntity();
     background->SetImage(mlAssets::Instance()->mpBGSfc);
@@ -91,24 +63,15 @@ mlStateGame::mlStateGame(mlGame *game) : mlState(game){
     background->enabled = true;
 }
 
-mlStateGame::~mlStateGame(){
-    trace("mlStateGame::~mlStateGame: Closing game state.");
-
-    // This destructor should clean up the game. Unload all assets and 
-    // do any kind of cleanup.
-}
-
 void mlStateGame::Reset(){
     trace("mlStateGame::Reset: Reseting game.");
 
-    // TODO: Make sure this function resets the game.
+    score = 0;
     win = false;
 
-    while(shotsShot.size()!=0){
-        shotsShot.pop_back();
-    }
-    
-    score = 0;
+    AllocateEnemies();
+
+    AllocateShots();
 }
 
 void mlStateGame::Pause(){
@@ -184,15 +147,7 @@ void mlStateGame::Update(){
 
     if(win == true) mpGame->mStateStack.pop_back();
 
-    explosion->Update();
-
-    EnemyUpdate();
-
-    if(mbShoot){
-        PlayerShoot();
-        mbShoot = false;    
-    }
-
+    if(mbShoot) PlayerShoot();
     if(mbLeft) player->MoveLeft();
     if(mbRight) player->MoveRight();
 
@@ -200,9 +155,12 @@ void mlStateGame::Update(){
 
     ShotsUpdate();
 
+    EnemyUpdate();
+
+    explosion->Update();
+
     mpStarfield->Update();
 
-    //sprintf(scoreStr,"SCORE: %i", score);
     snprintf(scoreStr, sizeof(scoreStr), "SCORE: %i", score);
     scoreLabel->SetText(scoreStr);
 
@@ -225,8 +183,58 @@ void mlStateGame::Draw(){
 }
 
 /* -------------------------------- Functions ------------------------------- */
+void mlStateGame::AllocateEnemies(){
+
+    while(enemies.size() != 0){
+        enemies.pop_back();
+    }
+
+    for(int i=0; i<MLENEMY_COLUMNS; i++){
+        for(int j=0; j<MLENEMY_ROWS; j++){
+            mlEnemy *enemy = new mlEnemy();
+            SDL_SetColorKey(mlAssets::Instance()->mpMartiansSfc, SDL_TRUE, SDL_MapRGB(mlAssets::Instance()->mpMartiansSfc->format, 0x00, 0x00, 0x00));
+            enemy->SetImage(mlAssets::Instance()->mpMartiansSfc);
+            enemy->srcIDRect.x = 40;
+            enemy->srcIDRect.y = 0 * j;
+            enemy->srcIDRect.w = 8;
+            enemy->srcIDRect.h = 8;
+            enemy->srcRect = enemy->dstRect = enemy->srcIDRect;
+            enemy->dstRect.x = 35*i+20;
+            enemy->dstRect.y = (50*j+30)*.4;
+            enemy->enabled = true;
+            
+            enemy->animates = true;
+            enemy->animFrames = 3;
+            enemy->animOffX = 8;
+            enemy->animFrameLength = 30;
+
+            enemies.push_back(enemy);
+        }
+    }
+}
+
+void mlStateGame::AllocateShots(){
+
+    while(shotsShot.size() != 0){
+        shotsShot.pop_back();
+    }
+    
+    for (int i = 0; i < MLPLAYER_SHOTS_AVAILABLE; i++){
+        mlEntity *shot = new mlEntity();
+        shot->SetImage(mlAssets::Instance()->mpMartiansSfc);
+        shot->srcIDRect.x = 8;
+        shot->srcIDRect.y = 16;
+
+        shot->srcIDRect.w = 3;
+        shot->srcIDRect.h = 5;
+        shot->srcRect = shot->dstRect = shot->srcIDRect;
+        shot->enabled = true;
+        shotsPool.push_back(shot);
+    }
+}
 
 void mlStateGame::PlayerShoot(){
+    // TODO: Add a timer here to limit the shooting frequency
     if(!shotsPool.empty()){
         player->isShooting = true;
         shotsShot.push_back(shotsPool.back());

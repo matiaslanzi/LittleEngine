@@ -24,6 +24,10 @@ void mlStateSplash::Setup(){
     stageStack.push_back(pressSpace);
 }
 
+void mlStateSplash::Reset(){
+
+}
+
 void mlStateSplash::Pause(){
 
 }
@@ -45,6 +49,7 @@ void mlStateSplash::Input(){
                 { 
                     case SDLK_SPACE:
                         mpGame->mStateStack.push_back(mpGame->mpGameState);
+                        mpGame->mStateStack.back()->Reset();
                         break;
 
                     case SDLK_ESCAPE:

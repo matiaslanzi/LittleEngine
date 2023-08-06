@@ -20,6 +20,7 @@ public:
     mlStateGame(mlGame *game);
     ~mlStateGame();
 
+    void Reset();
     void Pause();
     void Resume();
 
@@ -28,7 +29,8 @@ public:
     void Draw();
 
     void Setup();
-    void Reset();
+    void AllocateShots();
+    void AllocateEnemies();
 
     void PlayerShoot();
     void ShotsUpdate();
@@ -43,7 +45,6 @@ public:
     mlEntity*       scoreLabel;
     mlEntity*       explosion;
     mlStarField*    mpStarfield;
-
     mlEntity*       debug;
 
     bool                        win;

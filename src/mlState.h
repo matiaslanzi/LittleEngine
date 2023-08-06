@@ -8,18 +8,10 @@ class mlGame;
 class mlState{
 public:
 
-    enum gameStates{        //What's it this, I don't know, not being used but
-        SPLASH_STATE,       // it kinda makes sendo for what?
-        MENU_STATE,
-        SCORE_STATE,
-        GAME_STATE,
-        WINS_TATE,
-        GAMEOVER_STATE
-    };
-
     mlState(mlGame* game) : mpGame(game){};
     virtual ~mlState(){};
     
+    virtual void Reset() = 0;
     virtual void Pause() = 0;
     virtual void Resume() = 0;
 

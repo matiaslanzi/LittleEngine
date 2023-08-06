@@ -17,6 +17,7 @@ public:
     mlStateSplash(mlGame *game);
     ~mlStateSplash();
 
+    void Reset();
     void Pause();
     void Resume();
 
