@@ -17,6 +17,8 @@ public:
     mlGame();
     ~mlGame();
 
+    void QuitGame();
+
     bool Running();
 
     bool        mRunning;

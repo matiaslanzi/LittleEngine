@@ -26,6 +26,7 @@ mlGame::~mlGame(){
     trace("mlGame: closing game");
 
     if(mpSplashState) delete mpSplashState;
+
     if(mpGameState) delete mpGameState;
 
     trace("mlGame: Game closed");
@@ -36,9 +37,13 @@ mlGame::~mlGame(){
 bool mlGame::Running(){
 
     if(mlTime::Instance()->FrameTimeElapsed()){
+
         if(mStateStack.empty()){
+
             trace("mlGame: State stack is empty, quitting now.");
-            mRunning = false;
+            
+            QuitGame();
+
         } else {
 
             mStateStack.back()->Input();
@@ -59,4 +64,11 @@ bool mlGame::Running(){
     SDL_Delay(1);
 
     return mRunning;
+}
+
+void mlGame::QuitGame(){
+    // This handler gets called when we want to quit for any reason.
+    // Handle game saves here.
+    
+    mRunning = false;
 }

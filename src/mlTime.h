@@ -8,8 +8,6 @@ public:
     static mlTime* Instance();
     ~mlTime();
 
-    // void IncrementFrameCount();
-    // void CalculateDeltaTime();
     void SetFrameFinish();
     float FrameTime();
     bool FrameTimeElapsed();
@@ -20,7 +18,7 @@ public:
     Uint32          frameCount;
 
 private:
-    static mlTime *instance;
+    static mlTime   *instance;
 
     mlTime();                     // Can't be called
     //mlTime(const mlTime& orig){}; // Copy constructor private

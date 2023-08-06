@@ -36,8 +36,11 @@
 int main(int argc, char *argv[]){
 
     mlGame* mpGame = new mlGame();
+
     while(mpGame->Running());
+
     if(mpGame) delete mpGame;
+    
     mpGame = nullptr;
 
     return 0;

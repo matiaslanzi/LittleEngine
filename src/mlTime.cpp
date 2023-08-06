@@ -20,7 +20,7 @@ mlTime::mlTime(){
 }
 
 mlTime::~mlTime(){
-
+    trace("mlTime: Killing time");
 }
 
 void mlTime::SetFrameFinish(){
@@ -31,14 +31,11 @@ float mlTime::FrameTime(){
     return frameFinish + skipTicks;
 }
 
-/* ----- FrameTimeElapsed ----- */
+bool mlTime::FrameTimeElapsed(){
 /* This function returns true if the skipTicks period has elapsed.
  * The main loop depends on this time to execute. Then it updates 
  * frameCount and deltaTime, very useful pieces of information for
- * the game timing.
- */
-
-bool mlTime::FrameTimeElapsed(){
+ * the game timing. */
 
     if(SDL_GetTicks() > FrameTime()){
 
