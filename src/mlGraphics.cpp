@@ -27,7 +27,7 @@ mlGraphics::mlGraphics(){
         trace("mlGraphics: Log set to info.");
     #endif
 
-    // Set texture filtering 1 nearest pixel, 2 nearest linear, 3 nearest best
+    // Set texture filtering 0 nearest pixel, 1 nearest linear, 2 nearest best
     SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, MLSCALE_QUALITY);
     
     // Create SDL window

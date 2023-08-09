@@ -17,7 +17,7 @@
 #define MLFRAME_RATE        1000/MLFRAMES_PER_SECOND
 
 // Graphics
-#define MLSCALE_QUALITY     "1"
+#define MLSCALE_QUALITY     "0"
 #define MLWINDOW_TITLE      "Little Engine"
 #define MLWINDOW_WIDTH      320
 #define MLWINDOW_HEIGHT     240
