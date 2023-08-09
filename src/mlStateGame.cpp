@@ -66,6 +66,12 @@ void mlStateGame::Setup(){
 void mlStateGame::Reset(){
     trace("mlStateGame::Reset: Reseting game.");
 
+    mbLeft = false;
+    mbRight = false;
+    mbShoot = false;
+
+    explosion->enabled = false;
+
     score = 0;
     win = false;
 
