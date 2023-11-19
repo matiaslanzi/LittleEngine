@@ -11,9 +11,12 @@ BUILD_DIR = build/debug
 CC = clang++
 COMPILER_FLAGS = -std=c++17 -Wall -O0 -g
 
-
-
 # Detect machine architecture
+ifeq ($(OS),Windows_NT)
+    EXECUTABLE = myprogram.exe
+    RM = del /Q
+endif
+
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Linux)
     UNAME_M := $(shell uname -m)
@@ -30,7 +33,7 @@ else ifeq ($(UNAME_S),Darwin)
 	LINKER_FLAGS = -lsdl2 -lsdl2_ttf -lsdl2_image
 	INCLUDE_PATHS = -Iinclude/macos
 	LIBRARY_PATHS = -Llib/macos
-else
+else 
     $(error Unsupported platform: $(UNAME_S))
 endif
 
