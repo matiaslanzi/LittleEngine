@@ -6,8 +6,9 @@
 //
 
 #include <iostream>
-#include <SDL3/SDL.h>
 #include <cmath>
+#include <SDL3/SDL.h>
+
 
 float ratio = 16.0f/9.0f;
 float height = 600;
@@ -21,7 +22,7 @@ int skipTicks = (1.0f/frameRate) * 1000; // Milliseconds per frame
 float frameFinish = 0;
 float deltaTime = 0.0f;
 float speedScale = .1f;
-Uint64 frameCount = 0;
+uint64_t frameCount = 0;
 
 
 
