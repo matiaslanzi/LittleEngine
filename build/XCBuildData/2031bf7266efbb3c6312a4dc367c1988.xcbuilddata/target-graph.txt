@@ -1,0 +1,2 @@
+Target dependency graph (1 target)
+Target 'SDL3Test' in project 'SDL3Test' (no dependencies)
