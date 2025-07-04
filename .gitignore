@@ -34,3 +34,21 @@
 # MacOS DS Store
 .DS_Store
 
+# directories
+
+# Ignore entire directory
+build/
+bin/
+obj/
+
+# Ignore directory at root level only
+/Debug/
+/Release/
+
+# Ignore directories anywhere in the project
+**/temp/
+**/cache/
+
+# Ignore directory contents but keep the directory
+logs/*
+!logs/.gitkeep

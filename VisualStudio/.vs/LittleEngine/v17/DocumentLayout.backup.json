@@ -4,14 +4,6 @@
   "Documents": [
     {
       "AbsoluteMoniker": "D:0:0:{0204370D-D893-478E-9FA1-883E8B263310}|LittleEngine.vcxproj|E:\\Dev\\LittleEngine\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0204370D-D893-478E-9FA1-883E8B263310}|LittleEngine.vcxproj|E:\\Dev\\LittleEngine\\VisualStudio\\mlTime.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0204370D-D893-478E-9FA1-883E8B263310}|LittleEngine.vcxproj|solutionrelative:mlTime.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0204370D-D893-478E-9FA1-883E8B263310}|LittleEngine.vcxproj|E:\\Dev\\LittleEngine\\VisualStudio\\mlTime.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0204370D-D893-478E-9FA1-883E8B263310}|LittleEngine.vcxproj|solutionrelative:mlTime.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,34 +13,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "mlTime.cpp",
-              "DocumentMoniker": "E:\\Dev\\LittleEngine\\VisualStudio\\mlTime.cpp",
-              "RelativeDocumentMoniker": "mlTime.cpp",
-              "ToolTip": "E:\\Dev\\LittleEngine\\VisualStudio\\mlTime.cpp",
-              "RelativeToolTip": "mlTime.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-04T01:26:21.555Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "mlTime.h",
-              "DocumentMoniker": "E:\\Dev\\LittleEngine\\VisualStudio\\mlTime.h",
-              "RelativeDocumentMoniker": "mlTime.h",
-              "ToolTip": "E:\\Dev\\LittleEngine\\VisualStudio\\mlTime.h",
-              "RelativeToolTip": "mlTime.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-04T01:19:11.808Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
