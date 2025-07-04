@@ -1,0 +1,48 @@
+{
+  "buildCommand" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : true,
+    "targets" : null
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "fad3e92ef97b224f3c13204d39fecda95c439ffacafac114873118341eeb82c2"
+    }
+  ],
+  "containerPath" : "/Users/matiaslanzi/Dev/LittleEngine/XCode/LittleEngine.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "indexbuild",
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/matiaslanzi/Dev/LittleEngine/build/LittleEngine-eguglbmbihagrjgrsojwqehbineq/Index.noindex/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/matiaslanzi/Dev/LittleEngine/build/LittleEngine-eguglbmbihagrjgrsojwqehbineq/Index.noindex/Build/Products",
+      "derivedDataPath" : "/Users/matiaslanzi/Dev/LittleEngine/build",
+      "indexDataStoreFolderPath" : "/Users/matiaslanzi/Dev/LittleEngine/build/LittleEngine-eguglbmbihagrjgrsojwqehbineq/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/matiaslanzi/Dev/LittleEngine/build/LittleEngine-eguglbmbihagrjgrsojwqehbineq/Index.noindex/PrecompiledHeaders",
+      "indexRegularBuildIntermediatesPath" : "/Users/matiaslanzi/Dev/build/Intermediates.noindex",
+      "indexRegularBuildProductsPath" : "/Users/matiaslanzi/Dev/build/Products",
+      "pchPath" : "/Users/matiaslanzi/Dev/LittleEngine/build/LittleEngine-eguglbmbihagrjgrsojwqehbineq/Index.noindex/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "NO",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "qos" : "utility",
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
