@@ -5,8 +5,12 @@
 //  Created by Matias Lanzi on 7/3/25.
 //
 
+
 #include <iostream>
 #include <cmath>
+
+#include "mlPreferences.h"
+
 #include <SDL3/SDL.h>
 
 
@@ -27,6 +31,8 @@ uint64_t frameCount = 0;
 
 
 int main(int argc, const char * argv[]) {
+    
+    Preferences prefs = Preferences("config.txt");
     
     if (!SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS)) {
         std::cerr << "Failed to initialize SDL: " << SDL_GetError() << std::endl;
