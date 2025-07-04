@@ -10,7 +10,6 @@
 		AC0685F92E17512C00709720 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC0685F82E17512C00709720 /* main.cpp */; };
 		AC0685FD2E17519800709720 /* SDL3.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0685FC2E17519800709720 /* SDL3.xcframework */; };
 		AC0685FE2E17519800709720 /* SDL3.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC0685FC2E17519800709720 /* SDL3.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AC1666C62E17547C00ACFD0D /* mlPreferences.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC1666C52E17547C00ACFD0D /* mlPreferences.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,8 +30,6 @@
 		AC0685F82E17512C00709720 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../src/main.cpp; sourceTree = SOURCE_ROOT; };
 		AC0685FC2E17519800709720 /* SDL3.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SDL3.xcframework; path = ../external/SDL3.xcframework; sourceTree = "<group>"; };
 		AC0685FF2E17519800709720 /* LittleEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC1666C42E17547C00ACFD0D /* mlPreferences.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = mlPreferences.h; path = ../src/mlPreferences.h; sourceTree = SOURCE_ROOT; };
-		AC1666C52E17547C00ACFD0D /* mlPreferences.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = mlPreferences.cpp; path = ../src/mlPreferences.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +55,6 @@
 		AC73C5662E17507200118804 = {
 			isa = PBXGroup;
 			children = (
-				AC1666C42E17547C00ACFD0D /* mlPreferences.h */,
-				AC1666C52E17547C00ACFD0D /* mlPreferences.cpp */,
 				AC0685F82E17512C00709720 /* main.cpp */,
 				AC0685FB2E17519800709720 /* Frameworks */,
 				AC0685FF2E17519800709720 /* LittleEngine.app */,
@@ -138,7 +133,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC0685F92E17512C00709720 /* main.cpp in Sources */,
-				AC1666C62E17547C00ACFD0D /* mlPreferences.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
