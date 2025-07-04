@@ -1,0 +1,19 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(524,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  main.cpp
+E:\Dev\LittleEngine\src\main.cpp(17,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\Dev\LittleEngine\src\main.cpp(18,13): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\Dev\LittleEngine\src\main.cpp(21,15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\Dev\LittleEngine\src\main.cpp(38,59): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\Dev\LittleEngine\src\main.cpp(38,52): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\Dev\LittleEngine\src\main.cpp(61,25): warning C4244: 'initializing': conversion from 'Uint64' to 'float', possible loss of data
+E:\Dev\LittleEngine\src\main.cpp(73,27): warning C4244: 'initializing': conversion from 'Uint64' to 'float', possible loss of data
+E:\Dev\LittleEngine\src\main.cpp(81,52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\Dev\LittleEngine\src\main.cpp(82,52): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+E:\Dev\LittleEngine\src\main.cpp(88,112): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\Dev\LittleEngine\src\main.cpp(88,90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\Dev\LittleEngine\src\main.cpp(88,68): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\Dev\LittleEngine\src\main.cpp(88,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+E:\Dev\LittleEngine\src\main.cpp(93,39): warning C4244: '=': conversion from 'Uint64' to 'float', possible loss of data
+  LittleEngine.vcxproj -> E:\Dev\LittleEngine\build\LittleEngine.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

@@ -9,10 +9,7 @@
 #include <iostream>
 #include <cmath>
 
-#include "mlPreferences.h"
-
 #include <SDL3/SDL.h>
-
 
 float ratio = 16.0f/9.0f;
 float height = 600;
@@ -31,8 +28,7 @@ uint64_t frameCount = 0;
 
 
 int main(int argc, const char * argv[]) {
-    
-    Preferences prefs = Preferences("config.txt");
+
     
     if (!SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS)) {
         std::cerr << "Failed to initialize SDL: " << SDL_GetError() << std::endl;
