@@ -86,6 +86,14 @@ int main(int argc, const char * argv[]) {
             SDL_RenderClear(renderer);
             SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
             SDL_RenderLine(renderer, centerX - destPointX, centerY - destPointY, centerX + destPointX, centerY + destPointY);
+            SDL_SetRenderDrawColor(renderer, 0, 255, 0, 255);
+			centerX += destPointX * 0.01f; // Move center slightly towards the destination point
+			centerY += destPointY * 0.01f; // Move center slightly towards the destination point
+			centerX = std::max(0, std::min(centerX, static_cast<int>(width))); // Clamp centerX to window width
+			centerY = std::max(0, std::min(centerY, static_cast<int>(height))); // Clamp centerY to window height
+
+            SDL_RenderLine(renderer, centerX - destPointX, centerY - destPointY, centerX + destPointX, centerY + destPointY);
+
             SDL_RenderPresent(renderer);
             
             // Update frame timing
